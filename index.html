@@ -702,6 +702,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
+            margin-bottom: 60px;
         }
 
         .endorsement-card {
@@ -768,6 +769,73 @@
             color: var(--gold-primary);
             font-size: 0.9rem;
             font-weight: 500;
+        }
+
+        /* Endorsement Listings */
+        .endorsement-listings {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .endorsement-category {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .endorsement-category h3 {
+            color: var(--navy-deep);
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .endorsement-list {
+            list-style: none;
+        }
+
+        .endorsement-list li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .endorsement-list li:last-child {
+            border-bottom: none;
+        }
+
+        .endorsement-list li::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--gold-primary);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .endorsement-list .title {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .endorsement-name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 768px) {
+            .endorsement-listings {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Take Action Section */
@@ -1640,42 +1708,56 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Endorsements</span>
-                <h2 class="section-title">Trusted by Taxpayer Advocates</h2>
-                <p class="section-subtitle">Organizations and leaders who support Denis</p>
+                <h2 class="section-title">Trusted by Leaders Across California</h2>
+                <p class="section-subtitle">Elected officials and organizations who support Denis</p>
             </div>
-            <div class="endorsement-cards">
-                <div class="endorsement-card">
-                    <div class="endorsement-content">
-                        <p class="endorsement-text">Denis Bilodeau has demonstrated his unwavering commitment to protecting Proposition 13 and standing up for California taxpayers. We are proud to endorse his candidacy for the Board of Equalization.</p>
-                        <div class="endorsement-author">
-                            <div class="endorsement-logo">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <div class="endorsement-info">
-                                <h4>Howard Jarvis Taxpayers Association</h4>
-                                <span>Pledge Signatory</span>
-                            </div>
-                        </div>
-                    </div>
+            
+            <!-- Endorsement Listings -->
+            <div class="endorsement-listings">
+                <div class="endorsement-category">
+                    <h3>Elected Officials</h3>
+                    <ul class="endorsement-list">
+                        <li>
+                            <span class="endorsement-name">
+                                <strong>Tony Strickland</strong>
+                                <span class="title">Senator</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="endorsement-name">
+                                <strong>Tri Ta</strong>
+                                <span class="title">Assemblyman</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="endorsement-name">
+                                <strong>Phillip Chen</strong>
+                                <span class="title">Assemblyman</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="endorsement-name">
+                                <strong>Carl DeMaio</strong>
+                                <span class="title">Assemblyman</span>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="endorsement-card">
-                    <div class="endorsement-content">
-                        <p class="endorsement-text">As a longtime advocate for fiscal responsibility and transparent government, Denis Bilodeau brings the experience and dedication we need on the Board of Equalization.</p>
-                        <div class="endorsement-author">
-                            <div class="endorsement-logo">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M12 6v6l4 2"/>
-                                </svg>
-                            </div>
-                            <div class="endorsement-info">
-                                <h4>Orange Taxpayers Association</h4>
-                                <span>Organizational Endorsement</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="endorsement-category">
+                    <h3>Organizations</h3>
+                    <ul class="endorsement-list">
+                        <li>
+                            <span class="endorsement-name">
+                                <strong>Reform California</strong>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="endorsement-name">
+                                <strong>Howard Jarvis Taxpayers Association</strong>
+                                <span class="title">Pledge Signatory</span>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
